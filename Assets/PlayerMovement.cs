@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject windBox;
     Camera camera;
     [SerializeField] Collider2D col;
+
+    [SerializeField] float gravity;
+
     bool onEdge = false;
     Vector2 Cursor_position = new Vector2();
     Vector2 Wind_Direction = new Vector2();
@@ -67,10 +70,12 @@ public class PlayerMovement : MonoBehaviour
         if(MoveAlongEdge())
         {
             onEdge = true;
+            rb.gravityScale = 0;
             
         } else
         {
             onEdge = false;
+            rb.gravityScale = gravity;
 
             //old free movement
             /*

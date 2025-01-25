@@ -5124,6 +5124,7 @@ MonoBehaviour:
   rb: {fileID: 1363495606172893392}
   windBox: {fileID: 4806359818311356445}
   col: {fileID: 2692102258905494165}
+  gravity: 0.75
 --- !u!50 &1363495606172893392
 Rigidbody2D:
   serializedVersion: 4
@@ -5139,7 +5140,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 4
   m_AngularDrag: 0
-  m_GravityScale: 0
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
