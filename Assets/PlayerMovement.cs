@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] Camera camera;
+    Camera camera;
     [SerializeField] Collider2D col;
     Vector2 Cursor_position = new Vector2();
     Vector2 Wind_Direction = new Vector2();
@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        camera = FindFirstObjectByType<Camera>();
+
         edges = new Vector2[10];
         contacts = new ContactPoint2D[10];
 
