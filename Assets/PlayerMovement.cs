@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 
@@ -12,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject windBox;
     Camera camera;
     [SerializeField] Collider2D col;
+    bool onEdge = false;
     Vector2 Cursor_position = new Vector2();
     Vector2 Wind_Direction = new Vector2();
     float APPLIED_FORCE = 20;
@@ -63,12 +66,14 @@ public class PlayerMovement : MonoBehaviour
 
         if(MoveAlongEdge())
         {
-            if (Input.GetKey(KeyCode.Space)) {
-                rb.AddForce(Wind_Direction * 10);
-            }
-            //MoveAlongEdge();
+            onEdge = true;
+            
         } else
         {
+            onEdge = false;
+
+            //old free movement
+            /*
             if (Input.GetKey(KeyCode.W)) {
             rb.AddForce(Vector2.up * APPLIED_FORCE);
             }
@@ -81,20 +86,27 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.D)) {
                 rb.AddForce(Vector2.right * APPLIED_FORCE);
             }
+            */
+
+
 
         }
 
         if(Input.GetKey(KeyCode.Mouse0))
         {
             windBox.SetActive(true);
+
+            if(!onEdge)
+            {
+                rb.AddForce(-Wind_Direction.normalized * APPLIED_FORCE);
+            }
+
+
+
         } else
         {
             windBox.SetActive(false);
         }
-
-        
-
-        
 
         
 
@@ -123,6 +135,12 @@ public class PlayerMovement : MonoBehaviour
         {
             horizontal_input += Vector2.right;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            EdgeDetach(0);
+            //touching_edge = false;
+        } 
         
     }
 
@@ -136,15 +154,31 @@ public class PlayerMovement : MonoBehaviour
     {
         if(LayerMask.LayerToName(collision.gameObject.layer) == "Walls")
         {
+            Debug.Log("touched wall!");
+
             rb.velocity = Vector2.zero;
             rb.gravityScale = 0;
         }
     }
 
+    void EdgeDetach(int idx)
+    {
+        Debug.Log("Edge Detach!");
+
+        rb.AddForce(contacts[idx].normal * 5, ForceMode2D.Impulse);
+    }
 
     bool MoveAlongEdge()
     {
         bool touching_edge = false;
+
+        /*
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(EdgeDetach());
+            return touching_edge;
+        }
+        */
 
         for(int i = 0; i<col.GetContacts(contacts); i++)
         {
@@ -163,8 +197,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.AddForce(horizontal_input.x * -edges[i] * APPLIED_FORCE);
             }
-
+            
             touching_edge = true;
+            
+
+
         }
 
         return touching_edge;

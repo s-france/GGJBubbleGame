@@ -294,6 +294,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1714,7 +1727,74 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bubble_sprite_sheet_0: 4262870434803294021
+      bubble_sprite_sheet_1: 2640181696991489482
+      bubble_sprite_sheet_10: 3302410569341205066
+      bubble_sprite_sheet_11: -6098969026965931405
+      bubble_sprite_sheet_12: -9024602956156150618
+      bubble_sprite_sheet_13: 2727567005072083418
+      bubble_sprite_sheet_14: -8852531404948893249
+      bubble_sprite_sheet_15: 3336780280973828895
+      bubble_sprite_sheet_16: -7280271341932733908
+      bubble_sprite_sheet_17: -3191948345823972387
+      bubble_sprite_sheet_18: 6148224880421591463
+      bubble_sprite_sheet_19: -7391827459887107605
+      bubble_sprite_sheet_2: 3288833827372496780
+      bubble_sprite_sheet_20: 2904966754795512216
+      bubble_sprite_sheet_21: -3469152634056360382
+      bubble_sprite_sheet_22: -1133879596915927046
+      bubble_sprite_sheet_23: -2151181022516437175
+      bubble_sprite_sheet_24: -1806164475048310687
+      bubble_sprite_sheet_25: 5017445879927081056
+      bubble_sprite_sheet_26: -9102455377229121380
+      bubble_sprite_sheet_27: 3041854381881936152
+      bubble_sprite_sheet_28: -4055687581293880594
+      bubble_sprite_sheet_29: 44122222859412927
+      bubble_sprite_sheet_3: 8297739887261703314
+      bubble_sprite_sheet_30: 3387573857942205648
+      bubble_sprite_sheet_31: 1571848441294561979
+      bubble_sprite_sheet_32: -5619971295486837876
+      bubble_sprite_sheet_33: 2097135616162021698
+      bubble_sprite_sheet_34: -4101382530372812651
+      bubble_sprite_sheet_35: 8732175921413432345
+      bubble_sprite_sheet_36: -3261936776539066565
+      bubble_sprite_sheet_37: -1077300183024293371
+      bubble_sprite_sheet_38: -7198822561993802843
+      bubble_sprite_sheet_39: 5118512559018302161
+      bubble_sprite_sheet_4: -2798228589298721537
+      bubble_sprite_sheet_40: -5448826339730780372
+      bubble_sprite_sheet_41: 3300387794159458958
+      bubble_sprite_sheet_42: -6699040860896140155
+      bubble_sprite_sheet_43: 1363725108618966772
+      bubble_sprite_sheet_44: 3525214828359550573
+      bubble_sprite_sheet_45: 9121014791368812531
+      bubble_sprite_sheet_46: -1032804073627132125
+      bubble_sprite_sheet_47: 5148287786377324234
+      bubble_sprite_sheet_48: -7519853965752127535
+      bubble_sprite_sheet_49: 1427551600330970334
+      bubble_sprite_sheet_5: -6207200738657631739
+      bubble_sprite_sheet_50: 3263570740570517116
+      bubble_sprite_sheet_51: -3766163066587543378
+      bubble_sprite_sheet_52: 8797509964095102592
+      bubble_sprite_sheet_53: 4687890003664213929
+      bubble_sprite_sheet_54: -8585814579531473837
+      bubble_sprite_sheet_55: -4967471669608957960
+      bubble_sprite_sheet_56: -7279050103179342785
+      bubble_sprite_sheet_57: 4136044240963666213
+      bubble_sprite_sheet_58: 9025425941479439727
+      bubble_sprite_sheet_59: -578831563980924255
+      bubble_sprite_sheet_6: 5714805716100161655
+      bubble_sprite_sheet_60: -435549129458174499
+      bubble_sprite_sheet_61: -7465400856071182534
+      bubble_sprite_sheet_62: -5694762748054409724
+      bubble_sprite_sheet_63: 7481410246796742872
+      bubble_sprite_sheet_64: -5490115432027695950
+      bubble_sprite_sheet_65: 6355936552096110346
+      bubble_sprite_sheet_66: 6072659625387564513
+      bubble_sprite_sheet_7: 7941840638084711143
+      bubble_sprite_sheet_8: 1808212698432898833
+      bubble_sprite_sheet_9: -9046954844552415371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
