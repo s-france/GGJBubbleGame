@@ -145,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
         {
             EdgeDetach(0);
             //touching_edge = false;
-        } 
+        }
         
     }
 
