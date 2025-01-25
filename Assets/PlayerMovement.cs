@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
             horizontal_input += Vector2.right;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && onEdge)
         {
             EdgeDetach(0);
             //touching_edge = false;
