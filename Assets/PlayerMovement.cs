@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] GameObject windBox;
     Camera camera;
     [SerializeField] Collider2D col;
     Vector2 Cursor_position = new Vector2();
@@ -83,6 +84,14 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            windBox.SetActive(true);
+        } else
+        {
+            windBox.SetActive(false);
+        }
+
         
 
         
@@ -147,12 +156,12 @@ public class PlayerMovement : MonoBehaviour
 
             if (vertical_input.magnitude > 0 && vertical.magnitude > 0)
             {
-                rb.AddForce(vertical_input.y * edges[i] * APPLIED_FORCE);
+                rb.AddForce(vertical_input.y * -edges[i] * APPLIED_FORCE);
             }
 
             if (horizontal_input.magnitude >0 && horizontal.magnitude > 0)
             {
-                rb.AddForce(horizontal_input.x * edges[i] * APPLIED_FORCE);
+                rb.AddForce(horizontal_input.x * -edges[i] * APPLIED_FORCE);
             }
 
             touching_edge = true;
