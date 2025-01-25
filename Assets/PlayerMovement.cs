@@ -62,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
 
         if(MoveAlongEdge())
         {
+            if (Input.GetKey(KeyCode.Space)) {
+                rb.AddForce(Wind_Direction * 10);
+            }
             //MoveAlongEdge();
         } else
         {
@@ -111,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
         {
             horizontal_input += Vector2.right;
         }
+        
     }
 
     void RotatePlayer(Vector2 dir)
