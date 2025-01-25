@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     Camera camera;
     [SerializeField] Collider2D col;
 
+    [SerializeField] Transform cartSprite;
+    [SerializeField] Transform fanSprite;
+
     [SerializeField] float gravity;
 
     bool onEdge = false;
@@ -146,13 +149,20 @@ public class PlayerMovement : MonoBehaviour
             EdgeDetach(0);
             //touching_edge = false;
         }
-        
+
     }
 
     void RotatePlayer(Vector2 dir)
     {
         float angle = Vector2.SignedAngle(Vector2.up, dir);
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    void RotateCartSprite(Vector2 dir)
+    {
+        float angle = Vector2.SignedAngle(Vector2.up, dir);
+        cartSprite.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -189,6 +199,8 @@ public class PlayerMovement : MonoBehaviour
         {
             ContactPoint2D contact = contacts[i];
             edges[i] = Vector2.Perpendicular(contact.normal);
+
+            RotateCartSprite(contact.normal);
 
             Vector2 horizontal = new Vector2(edges[i].x, 0);
             Vector2 vertical = new Vector2(0, edges[i].y);
