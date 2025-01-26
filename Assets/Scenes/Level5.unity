@@ -1430,6 +1430,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 038b3704b8c04b648b5b2cad38ac07be, type: 3}
+--- !u!1001 &923888735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1213126462820173845, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_Name
+      value: SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 186.85062
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 117.92019
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7619565
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193454630651954860, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c35e2efa8efad549b5ba79b6807b5aa, type: 3}
 --- !u!1001 &924722416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1568,50 +1625,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ee5fd4ae1ab055459e8c44d7f222b96, type: 3}
---- !u!1 &994865582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 994865584}
-  - component: {fileID: 994865583}
-  m_Layer: 0
-  m_Name: SceneLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &994865583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994865582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9576401318c05d5499191ac79379dbe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &994865584
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994865582}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 186.85062, y: 117.92019, z: -3.7619565}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1137066782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3045,7 +3058,7 @@ SceneRoots:
   - {fileID: 1609637229}
   - {fileID: 313933750}
   - {fileID: 1455189481}
-  - {fileID: 994865584}
+  - {fileID: 923888735}
   - {fileID: 882622928}
   - {fileID: 1466838665}
   - {fileID: 258815671}
