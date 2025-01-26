@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public static SceneLoader instance;
     // Start is called before the first frame update
-    void Start()
+    async Task Start()
     {
         
     }
@@ -17,6 +19,15 @@ public class SceneLoader : MonoBehaviour
         
     }
 
+    void Awake() {
+        if (instance != null ) {
+            Destroy(gameObject);
+        }
+        else {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+    }
 
     public void LoadScene(string scene)
     {
