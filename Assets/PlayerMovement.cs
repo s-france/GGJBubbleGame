@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] GameObject windBox;
     [SerializeField] AudioSource jumpSFX;
+    [SerializeField] AudioSource rollSFX;
     Camera camera;
     //[SerializeField] AudioSource 
     [SerializeField] Collider2D col;
@@ -24,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform forwardEdge;
 
     [SerializeField] float gravity;
-    [SerializeField] float coyoteTime;
     float coyoteTimer = 0;
 
     bool onEdge = false;
@@ -61,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coyoteTimer += Time.deltaTime;
 
         ReadInputs();
 
@@ -80,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         
         RotatePlayer(Wind_Direction);
 
+
     }
 
     void FixedUpdate() {
@@ -88,6 +88,11 @@ public class PlayerMovement : MonoBehaviour
         {
             onEdge = true;
             rb.gravityScale = 0;
+
+            if(rb.velocity.magnitude > 0.5f)
+            {
+                rollSFX.enabled = true;
+            }
             
         } else
         {
