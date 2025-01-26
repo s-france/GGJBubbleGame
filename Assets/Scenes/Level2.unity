@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 823310547}
   - component: {fileID: 823310546}
   - component: {fileID: 823310545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1915,9 +1915,9 @@ SceneRoots:
   - {fileID: 1896739172}
   - {fileID: 823310547}
   - {fileID: 1385982583}
-  - {fileID: 12291697}
-  - {fileID: 1891261333213334072}
+  - {fileID: 1984730178}
   - {fileID: 1704843158}
   - {fileID: 484570336}
   - {fileID: 7960186004885511140}
   - {fileID: 1860673816}
+  - {fileID: 12291697}
