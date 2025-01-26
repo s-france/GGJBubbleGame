@@ -23,7 +23,7 @@ public class FailChecker : MonoBehaviour
 
     void CheckFailure() {
         if(character == null || bubble == null) {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
