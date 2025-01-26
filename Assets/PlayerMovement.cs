@@ -17,14 +17,24 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform cartSprite;
     [SerializeField] Transform fanSprite;
+    [SerializeField] Transform cornerCheck;
+    [SerializeField] Transform backwardEdge;
+    [SerializeField] Transform forwardEdge;
 
     [SerializeField] float gravity;
+    [SerializeField] float coyoteTime;
+    float coyoteTimer = 0;
 
     bool onEdge = false;
     Vector2 Cursor_position = new Vector2();
     Vector2 Wind_Direction = new Vector2();
+
+    Vector2 floorNorm = Vector2.zero;
+
     float APPLIED_FORCE = 20;
-    //Vector2 Up = new Vector2.up;
+
+
+
 
     Vector2 horizontal_input;
     Vector2 vertical_input;
@@ -49,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        coyoteTimer += Time.deltaTime;
+
         ReadInputs();
 
         //Cursor_position = (Vector2) Input.mousePosition;
@@ -198,33 +210,167 @@ public class PlayerMovement : MonoBehaviour
         for(int i = 0; i<col.GetContacts(contacts); i++)
         {
             ContactPoint2D contact = contacts[i];
-            edges[i] = Vector2.Perpendicular(contact.normal);
 
-            RotateCartSprite(contact.normal);
-
-            Vector2 horizontal = new Vector2(edges[i].x, 0);
-            Vector2 vertical = new Vector2(0, edges[i].y);
-
-            if (vertical_input.magnitude > 0 && vertical.magnitude > 0)
+            if( LayerMask.LayerToName(contact.collider.gameObject.layer) == "Walls")
             {
-                rb.AddForce(vertical_input.y * -edges[i] * APPLIED_FORCE);
-            }
+                edges[i] = Vector2.Perpendicular(contact.normal);
 
-            if (horizontal_input.magnitude >0 && horizontal.magnitude > 0)
+                RotateCartSprite(contact.normal);
+
+                Vector2 horizontal = new Vector2(edges[i].x, 0);
+                Vector2 vertical = new Vector2(0, edges[i].y);
+                
+                floorNorm = contact.normal;
+
+
+                if (vertical_input.magnitude > 0 && vertical.magnitude > 0)
+                {
+                    rb.AddForce(vertical_input.y * -edges[i] * APPLIED_FORCE);
+                }
+
+                if (horizontal_input.magnitude >0 && horizontal.magnitude > 0)
+                {
+                    rb.AddForce(horizontal_input.x * -edges[i] * APPLIED_FORCE);
+                }
+                
+
+                touching_edge = true;
+
+            }
+        }
+
+        
+
+        /*
+
+        //corner check
+        RaycastHit2D cornerRC = Physics2D.Raycast(cornerCheck.position, -rb.velocity, .53f);
+
+        Debug.DrawRay(cornerCheck.position, -rb.velocity.normalized * .53f, Color.magenta);
+
+        bool cornerSnap = false;
+
+        if(cornerRC && cornerRC.distance >= .01f)
+        {
+            Debug.Log("corner detected!");
+
+            if(cornerRC.distance >= .5f)
             {
-                rb.AddForce(horizontal_input.x * -edges[i] * APPLIED_FORCE);
-            }
-            
-            touching_edge = true;
-            
+                Debug.Log("corner snap!");
+                //snap around corner
+                rb.velocity = Vector3.Cross(rb.velocity, Vector3.forward);
+                cornerSnap = true;
 
+                Debug.Log("new velocity: " + rb.velocity);
+
+            } else if (!touching_edge)
+            {
+                RaycastHit2D sideEdge;
+                
+                sideEdge = Physics2D.Raycast(backwardEdge.position, -transform.up, .52f);
+
+                //move off edge until reaching snap distance
+                if(sideEdge)
+                {
+                    RotateCartSprite(sideEdge.normal);
+
+                    Vector2 perp = Vector2.Perpendicular(sideEdge.normal);
+
+                    Vector2 horizontal = new Vector2(perp.x, 0);
+                    Vector2 vertical = new Vector2(0, perp.y);
+                    
+                    floorNorm = sideEdge.normal;
+
+
+                    if (vertical_input.magnitude > 0 && vertical.magnitude > 0)
+                    {
+                        rb.AddForce(vertical_input.y * -perp * APPLIED_FORCE);
+                    }
+
+                    if (horizontal_input.magnitude >0 && horizontal.magnitude > 0)
+                    {
+                        rb.AddForce(horizontal_input.x * -perp * APPLIED_FORCE);
+                    }
+                    
+                    touching_edge = true;
+
+
+                }
+                
+
+
+            }
 
         }
+
+        if(cornerSnap)
+        {
+            RaycastHit2D sideEdge;
+                
+            sideEdge = Physics2D.Raycast(forwardEdge.position, -transform.up, .52f);
+
+            if(sideEdge)
+            {
+                    RotateCartSprite(sideEdge.normal);
+
+                    Vector2 perp = Vector2.Perpendicular(sideEdge.normal);
+
+                    Vector2 horizontal = new Vector2(perp.x, 0);
+                    Vector2 vertical = new Vector2(0, perp.y);
+                    
+                    floorNorm = sideEdge.normal;
+
+
+                    if (vertical_input.magnitude > 0 && vertical.magnitude > 0)
+                    {
+                        rb.AddForce(vertical_input.y * -perp * APPLIED_FORCE);
+                    }
+
+                    if (horizontal_input.magnitude >0 && horizontal.magnitude > 0)
+                    {
+                        rb.AddForce(horizontal_input.x * -perp * APPLIED_FORCE);
+                    }
+                    
+                    touching_edge = true;
+            }
+
+        }
+        */
+
+        if(touching_edge)
+        {
+            //Debug.Log(Vector2.SignedAngle(floorNorm, rb.velocity));
+
+            if(Vector2.SignedAngle(floorNorm, rb.velocity) < 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            } else
+            {
+                transform.localScale = new Vector3(-1,1,1);
+            }
+        }
+
 
         return touching_edge;
 
 
 
     }
+
+
+    void CornerCheck()
+    {
+        if(rb.velocity.y > 0)
+        {
+
+        } else if(rb.velocity.y < 0)
+        {
+
+
+        }
+
+
+    }
+
 
 }
