@@ -5085,7 +5085,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2, y: 2.3771594}
+  m_Size: {x: 1.4, y: 2.3771594}
   m_EdgeRadius: 0
 --- !u!249 &8835795242830950594
 AreaEffector2D:
@@ -5196,6 +5196,7 @@ MonoBehaviour:
   backwardEdge: {fileID: 756767257635871463}
   forwardEdge: {fileID: 7900056578028376908}
   gravity: 0.75
+  coyoteTime: 0
 --- !u!50 &1363495606172893392
 Rigidbody2D:
   serializedVersion: 4
