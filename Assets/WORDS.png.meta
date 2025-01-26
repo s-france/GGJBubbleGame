@@ -171,6 +171,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -730,7 +743,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WORDS_0: -7137222169945328818
+      WORDS_1: 6843855888247450807
+      WORDS_10: 5124763865981116080
+      WORDS_11: 3286874933525398844
+      WORDS_12: -9113069422732463961
+      WORDS_13: -5440285422671130607
+      WORDS_14: 9187459646541892705
+      WORDS_15: -4099511101924646231
+      WORDS_16: -6150287402827003168
+      WORDS_17: 1436010571551957660
+      WORDS_18: -1638476818528599279
+      WORDS_19: -7680489969368305551
+      WORDS_2: -8245107097266459032
+      WORDS_20: 2877335764243170167
+      WORDS_21: 3554510882884710453
+      WORDS_22: -7182297257369041708
+      WORDS_23: -5964391923131022601
+      WORDS_24: -7775388084242910066
+      WORDS_25: 1995335126682550439
+      WORDS_3: 3660966802995880568
+      WORDS_4: -212181931587471236
+      WORDS_5: 2915048424883613105
+      WORDS_6: -2654108338437997414
+      WORDS_7: 1605515644890838428
+      WORDS_8: 8136412747245998585
+      WORDS_9: 5228768130038384004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
