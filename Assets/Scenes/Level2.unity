@@ -197,6 +197,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8838463222169941975, guid: 7dc20aa5d35d1074ba11e83539564ab2, type: 3}
   m_PrefabInstance: {fileID: 12291697}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &12291699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6791706355905178560, guid: 7dc20aa5d35d1074ba11e83539564ab2, type: 3}
+  m_PrefabInstance: {fileID: 12291697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &82558552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1094,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05cabb518fcfac6489a5c3b78ad83cd0, type: 3}
+--- !u!1 &1385982584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7223659620567857784, guid: 05cabb518fcfac6489a5c3b78ad83cd0, type: 3}
+  m_PrefabInstance: {fileID: 1385982583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1484742834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,11 +1599,11 @@ PrefabInstance:
     - target: {fileID: 544386265043161903, guid: ece8c107d4a72a049a2b9d747a06f062, type: 3}
       propertyPath: bubble
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 12291699}
     - target: {fileID: 544386265043161903, guid: ece8c107d4a72a049a2b9d747a06f062, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1385982584}
     - target: {fileID: 5173713438389665143, guid: ece8c107d4a72a049a2b9d747a06f062, type: 3}
       propertyPath: m_Name
       value: LevelAgent

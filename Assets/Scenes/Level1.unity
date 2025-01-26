@@ -588,6 +588,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05cabb518fcfac6489a5c3b78ad83cd0, type: 3}
+--- !u!1 &753401139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7223659620567857784, guid: 05cabb518fcfac6489a5c3b78ad83cd0, type: 3}
+  m_PrefabInstance: {fileID: 753401138}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &812671390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -599,11 +604,11 @@ PrefabInstance:
     - target: {fileID: 544386265043161903, guid: ece8c107d4a72a049a2b9d747a06f062, type: 3}
       propertyPath: bubble
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 753401139}
     - target: {fileID: 544386265043161903, guid: ece8c107d4a72a049a2b9d747a06f062, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1387687769}
     - target: {fileID: 5173713438389665143, guid: ece8c107d4a72a049a2b9d747a06f062, type: 3}
       propertyPath: m_Name
       value: LevelAgent
@@ -864,6 +869,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc20aa5d35d1074ba11e83539564ab2, type: 3}
+--- !u!1 &1387687769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6791706355905178560, guid: 7dc20aa5d35d1074ba11e83539564ab2, type: 3}
+  m_PrefabInstance: {fileID: 1387687768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1398715712
 GameObject:
   m_ObjectHideFlags: 0

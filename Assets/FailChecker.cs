@@ -18,8 +18,12 @@ public class FailChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       Invoke("CheckFailure", 5);
+    }
+
+    void CheckFailure() {
         if(character == null || bubble == null) {
             SceneManager.LoadScene("Level2");
-        }   
+        }
     }
 }
