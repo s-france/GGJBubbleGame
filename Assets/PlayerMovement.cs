@@ -12,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] Rigidbody2D rb;
     [SerializeField] GameObject windBox;
+    [SerializeField] AudioSource jumpSFX;
     Camera camera;
+    //[SerializeField] AudioSource 
     [SerializeField] Collider2D col;
 
     [SerializeField] Transform cartSprite;
@@ -191,6 +193,8 @@ public class PlayerMovement : MonoBehaviour
     void EdgeDetach(int idx)
     {
         Debug.Log("Edge Detach!");
+
+        jumpSFX.Play();
 
         rb.AddForce(contacts[idx].normal * 5, ForceMode2D.Impulse);
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpikeBehavior : MonoBehaviour
 {
+    [SerializeField] AudioSource popSFX;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,8 @@ public class SpikeBehavior : MonoBehaviour
         
     }
     void OnCollisionEnter2D(Collision2D collision){
+        popSFX.Play();
+
         Destroy(collision.gameObject);
     }
 }

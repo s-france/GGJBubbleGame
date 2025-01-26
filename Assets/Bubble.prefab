@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 8625790128778057375}
   - component: {fileID: 6317870073263288564}
   - component: {fileID: 5305669938455120452}
-  - component: {fileID: 6460247568677208295}
   - component: {fileID: 7673476758134693279}
   m_Layer: 3
   m_Name: Bubble
@@ -205,19 +204,6 @@ Rigidbody2D:
   m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &5305669938455120452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7223659620567857784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b30e41dc93d9342969aa6da8544b50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6317870073263288564}
---- !u!114 &6460247568677208295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
