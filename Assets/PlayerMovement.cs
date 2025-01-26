@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor.Timeline.Actions;
+//using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 
@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] Rigidbody2D rb;
     [SerializeField] GameObject windBox;
-    Camera camera;
+    new Camera camera;
     [SerializeField] Collider2D col;
 
     [SerializeField] Transform cartSprite;
