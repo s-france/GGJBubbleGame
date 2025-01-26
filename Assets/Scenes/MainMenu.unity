@@ -355,6 +355,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9576401318c05d5499191ac79379dbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &845230393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 218564948519461065, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_Color.a
+      value: 0.87058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2124607882130296002, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153544778753307307, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
+      propertyPath: m_Name
+      value: water animation
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5f0dc1927edb384e9c6a27cab2e7e38, type: 3}
 --- !u!1 &845401738
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +793,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.49942148, g: 0.6243844, b: 0.8207547, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -774,7 +843,7 @@ Transform:
   m_GameObject: {fileID: 1253158712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 716.11, y: 12, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1664,7 +1733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3584906, g: 0.0851417, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2090,3 +2159,4 @@ SceneRoots:
   - {fileID: 1999243073}
   - {fileID: 2125312846}
   - {fileID: 8568263171855682667}
+  - {fileID: 845230393}
